@@ -30,6 +30,21 @@ jobs:
       - name: Toplayiciyi calistir
         run: node topla.js --once
 
+      - name: Sonuclari goster
+        if: always()
+        run: |
+          echo "===== DOSYALAR ====="
+          ls -la veri/ 2>/dev/null || echo "veri klasoru yok"
+          echo ""
+          echo "===== HATALAR ====="
+          tail -30 veri/hata.jsonl 2>/dev/null || echo "hata yok"
+          echo ""
+          echo "===== POMPA FIYATLARI ====="
+          tail -10 veri/pompa.jsonl 2>/dev/null || echo "pompa verisi yok"
+          echo ""
+          echo "===== HABERLER ====="
+          tail -20 veri/haber.jsonl 2>/dev/null || echo "haber yok"
+
       - name: Veriyi kaydet
         run: |
           git config user.name  "seyahatmetre-bot"
