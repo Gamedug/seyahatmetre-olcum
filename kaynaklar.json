@@ -1,0 +1,73 @@
+{
+  "_aciklama": "Kaynak listesi. Yeni kaynak eklemek icin bu dosyaya satir ekle, kodu degistirme.",
+
+  "pompa_kaynaklari": [
+    {
+      "kod": "opet_istanbul_avrupa",
+      "ad": "Opet - Istanbul Avrupa",
+      "url": "https://www.opet.com.tr/akaryakit-fiyatlari/istanbul-avrupa",
+      "sehir": "istanbul-avrupa"
+    },
+    {
+      "kod": "opet_istanbul_anadolu",
+      "ad": "Opet - Istanbul Anadolu",
+      "url": "https://www.opet.com.tr/akaryakit-fiyatlari/istanbul-anadolu",
+      "sehir": "istanbul-anadolu"
+    },
+    {
+      "kod": "opet_ankara",
+      "ad": "Opet - Ankara",
+      "url": "https://www.opet.com.tr/akaryakit-fiyatlari/ankara",
+      "sehir": "ankara"
+    },
+    {
+      "kod": "opet_izmir",
+      "ad": "Opet - Izmir",
+      "url": "https://www.opet.com.tr/akaryakit-fiyatlari/izmir",
+      "sehir": "izmir"
+    }
+  ],
+
+  "haber_kaynaklari": [
+    {
+      "kod": "ntv_ekonomi",
+      "ad": "NTV Ekonomi RSS",
+      "url": "https://www.ntv.com.tr/ekonomi.rss",
+      "tip": "rss"
+    },
+    {
+      "kod": "aa_ekonomi",
+      "ad": "Anadolu Ajansi Ekonomi RSS",
+      "url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "tip": "rss"
+    },
+    {
+      "kod": "hurriyet_ekonomi",
+      "ad": "Hurriyet Ekonomi RSS",
+      "url": "https://www.hurriyet.com.tr/rss/ekonomi",
+      "tip": "rss"
+    },
+    {
+      "kod": "sozcu_ekonomi",
+      "ad": "Sozcu Ekonomi RSS",
+      "url": "https://www.sozcu.com.tr/feed",
+      "tip": "rss"
+    },
+    {
+      "kod": "dunya_ekonomi",
+      "ad": "Dunya Gazetesi RSS",
+      "url": "https://www.dunya.com/rss?dunya",
+      "tip": "rss"
+    }
+  ],
+
+  "ayarlar": {
+    "yogun_saat_baslangic": 16,
+    "yogun_saat_bitis": 2,
+    "yogun_aralik_dakika": 5,
+    "sakin_aralik_dakika": 60,
+    "zaman_dilimi": "Europe/Istanbul",
+    "_kimlik_notu": "Bir kaynak 403 veriyorsa bu satiri degistirmeyi dene.",
+    "tarayici_kimligi": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+  }
+}
