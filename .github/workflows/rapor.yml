@@ -1,0 +1,35 @@
+name: Rapor al
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  rapor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Raporu uret
+        run: node rapor.js | tee rapor-cikti.txt
+
+      - name: Ozeti sayfaya yaz
+        run: |
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat rapor-cikti.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Raporu dosya olarak sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: seyahatmetre-raporu
+          path: rapor-cikti.txt
+          retention-days: 90
