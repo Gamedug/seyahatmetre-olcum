@@ -1,0 +1,47 @@
+name: Veri topla
+
+on:
+  schedule:
+    - cron: '*/10 13-22 * * *'
+    - cron: '25 1-12,23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: topla
+  cancel-in-progress: false
+
+jobs:
+  topla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+
+      - name: Node kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Toplayiciyi calistir
+        run: node topla.js --once
+
+      - name: Veriyi kaydet
+        run: |
+          git config user.name  "seyahatmetre-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add veri/
+          if git diff --staged --quiet; then
+            echo "Yeni veri yok, kayit atlanacak."
+          else
+            git commit -m "veri: $(date -u '+%Y-%m-%d %H:%M') UTC"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "Deneme $i basarisiz, tekrar denenecek..."
+              sleep 5
+            done
+          fi
