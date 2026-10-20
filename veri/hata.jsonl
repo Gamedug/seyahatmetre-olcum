@@ -6301,3 +6301,8 @@
 {"zaman":"2026-10-20T17:47:53.442Z","kaynak":"opet_ankara","hata":"fiyat bulunamadi"}
 {"zaman":"2026-10-20T17:47:53.442Z","kaynak":"opet_izmir","hata":"fiyat bulunamadi"}
 {"zaman":"2026-10-20T17:47:55.256Z","kaynak":"sozcu_ekonomi","hata":"HTTP 404"}
+{"zaman":"2026-10-20T20:54:58.316Z","kaynak":"opet_istanbul_avrupa","hata":"fiyat bulunamadi"}
+{"zaman":"2026-10-20T20:54:58.316Z","kaynak":"opet_istanbul_anadolu","hata":"fiyat bulunamadi"}
+{"zaman":"2026-10-20T20:54:58.316Z","kaynak":"opet_ankara","hata":"fiyat bulunamadi"}
+{"zaman":"2026-10-20T20:54:58.316Z","kaynak":"opet_izmir","hata":"fiyat bulunamadi"}
+{"zaman":"2026-10-20T20:55:00.399Z","kaynak":"sozcu_ekonomi","hata":"HTTP 404"}
